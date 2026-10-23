@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Cutie! 🎂💗</title>
+<style>
+:root{--pink:#ff6fae;--rose:#ffd6e7;--cream:#fff8fc;--purple:#9b79d6;--ink:#54384b}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff4fa,#ffe0ec 48%,#f0e7ff);overflow-x:hidden}
+.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floaties span{position:absolute;bottom:-50px;animation:float 12s linear infinite;font-size:22px;opacity:.65}
+.floaties span:nth-child(1){left:8%;animation-delay:0s}.floaties span:nth-child(2){left:25%;animation-delay:3s}.floaties span:nth-child(3){left:47%;animation-delay:6s}.floaties span:nth-child(4){left:69%;animation-delay:1s}.floaties span:nth-child(5){left:88%;animation-delay:4s}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:26px 16px 55px}
+.hero,.card{background:#ffffffd9;border:2px solid #fff;box-shadow:0 14px 40px #c77aa52b;border-radius:28px;padding:28px;margin:15px 0;text-align:center}
+.sticker{font-size:52px;display:block;animation:bop 2s ease-in-out infinite}
+@keyframes bop{50%{transform:rotate(-7deg) scale(1.07)}}
+h1{font-size:clamp(2.2rem,8vw,4.3rem);line-height:1.03;margin:12px 0;color:#ed579a;text-shadow:2px 3px #ffe0ee}
+h2{color:#d84d91;margin-top:0}
+p{font-size:1.06rem;line-height:1.8}
+button{border:0;border-radius:999px;padding:14px 22px;font-size:1rem;font-weight:800;background:linear-gradient(90deg,#ff79b5,#b89aff);color:white;box-shadow:0 7px 0 #dba4ce;cursor:pointer;margin:7px;transition:transform .15s}
+button:active{transform:translateY(4px);box-shadow:0 3px 0 #dba4ce}
+.hidden{display:none}
+.note{font-size:.9rem;color:#92728a}
+.gift{font-size:68px;cursor:pointer;display:inline-block;transition:transform .3s}
+.gift:hover{transform:rotate(10deg) scale(1.1)}
+.pill{display:inline-block;background:#fff0f7;border-radius:18px;padding:12px 15px;margin:5px;font-weight:700}
+#surprise{font-size:1.1rem;background:#fff0f7;padding:18px;border-radius:20px;margin-top:15px}
+footer{text-align:center;padding:15px;color:#976e8d}
+</style>
+</head>
+<body>
+<div class="floaties"><span>💗</span><span>✨</span><span>🎀</span><span>💖</span><span>🧸</span></div>
+<main>
+<section class="hero">
+<span class="sticker">🎂🧸🎀</span>
+<p class="note">A tiny internet surprise made especially for you</p>
+<h1>HAPPY BIRTHDAY,<br>YOU CUTIE! 💗</h1>
+<p>To the boy who is 10% sensible, 90% adorable chaos, and 100% deserving of cake. 😭😂</p>
+<button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Open your birthday letter 💌</button>
+</section>
+
+<section class="card" id="letter">
+<h2>💌 A little letter for you</h2>
+<p>Happiest birthdayyyyy to youuu! 🥹💗 Today is all about you, birthday prince, so please act surprised when everyone gives you attention. We all know your ego has been preparing for this day since last year. 👑😂</p>
+<p>Jokes aside, I hope this new year of your life brings you peace when things feel heavy, courage when things feel scary, success in the things you work hard for, and so many happy moments that your camera roll can't keep up. ✨</p>
+<p>I hope you keep finding reasons to laugh, people who make you feel safe, opportunities that help you grow, and little everyday things that remind you life can be beautiful. You deserve kindness, genuine happiness, good health, and dreams that turn into real memories. 🌷</p>
+<p>Never forget that you don't have to be perfect or have everything figured out to be special. Your weird jokes, random moods, silly habits, and wonderfully imperfect self are all part of what makes you YOU. So please keep being your lovely, slightly annoying, very cute self. 🧸💞</p>
+<p>May your cake be huge, your gifts be excellent, your photos be handsome, and your problems be as small as the amount of cake you're willing to share with me. (Which should be zero problems and at least three slices, thanks.) 🎂😭</p>
+<p>And if today gets busy or life gets a little difficult, I hope you remember this: someone took a little time to make this tiny corner of the internet just to celebrate you. You matter, your happiness matters, and I really hope this year is kind to you. 🫂💗</p>
+<p><b>Happy birthday, troublemaker.</b> Stay happy, stay healthy, keep dreaming big, and never become boring. That's an official birthday rule. 🎀✨</p>
+</section>
+
+<section class="card">
+<h2>📜 Your official birthday privileges</h2>
+<div class="pill">🍰 Unlimited cake</div><div class="pill">👑 VIP treatment</div>
+<div class="pill">🫂 Unlimited hugs</div><div class="pill">😂 Extra silliness</div>
+<div class="pill">💗 Maximum happiness</div>
+<p class="note">Terms & conditions: You are still responsible for your own nonsense.</p>
+</section>
+
+<section class="card">
+<h2>🎁 Tap the gift. Don't be shy.</h2>
+<div class="gift" onclick="revealGift()" role="button" aria-label="Open surprise gift">🎁</div>
+<div id="surprise" class="hidden">SURPRISEEEE! 🎉 Your gift contains: one giant virtual hug 🫂, 1000 tiny sparkles ✨, unlimited good wishes 💗, and a lifetime subscription to being lovingly roasted. No cancellations. 😂🎀</div>
+</section>
+
+<section class="card">
+<h2>🕯️ Make a wish!</h2>
+<p>Close your eyes for a second, make your biggest wish, and blow out these very imaginary candles. Ready?</p>
+<div style="font-size:46px">🕯️🕯️🕯️🎂🕯️🕯️🕯️</div>
+<button onclick="wish()">I made a wish! ✨</button>
+<div id="wish" class="hidden"><p>✨ Wish sent to the universe with extra glitter and birthday magic! 💫 Now go make it happen, birthday boy. 💗</p></div>
+</section>
+<section class="hero">
+<span class="sticker">💗🫂💗</span>
+<h2>One last thing...</h2>
+<p>You're officially required to smile now. If you didn't smile, please restart your face and try again. 😭😂</p>
+<p><b>HAPPIEST BIRTHDAYYYYY! 🎂💋🎀</b></p>
+<p class="note">Made with extra sweetness, a little chaos, and lots of love.</p>
+<button onclick="sprinkle()">Send you birthday sparkles ✨</button>
+<div id="sparkles" aria-live="polite"></div>
+</section>
+<footer>💌 End of surprise • Begin a wonderful new year 💌</footer>
+</main>
+<script>
+function revealGift(){document.getElementById('surprise').classList.remove('hidden');}
+function wish(){document.getElementById('wish').classList.remove('hidden');}
+function sprinkle(){document.getElementById('sparkles').innerHTML='<p style="font-size:30px">🎉✨💖🎀🧸💫💗✨🎉</p><p>You have been attacked by cuteness. There is no escape. 😂</p>';}
+</script>
+</body>
+</html>
